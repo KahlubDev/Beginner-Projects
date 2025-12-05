@@ -1,0 +1,37 @@
+// Temperature conversion in C++
+// From Celsius to Fahrenheit = (1.8 * temp) + 32
+// From Fahrenheit to Celsius = (temp - 32) / 1.8
+#include <iostream>
+using namespace std;
+
+int main() {
+    double temp;
+    char unit;
+    cout << "**************Temperature Conversion in C++******************************" << endl;
+    cout << "F = Fahrenheit" << endl;
+    cout << "C = Celsius" << endl;
+    cout << "What unit would you like to convert to? "<<'\n';
+    cin >> unit;
+    
+    if (unit == 'F' || unit == 'f') {
+    cout << "Enter temperature in Celsius: ";
+    cin >> temp;
+    temp = (1.8 * temp) + 32;
+    cout << "The temperature is: " << temp << " F" << endl;
+    }
+    else if (unit == 'C' || unit == 'c') {
+    cout << "Enter temperature in Fahrenheit: ";
+    cin >> temp;
+    temp = (temp - 32) / 1.8;
+    cout << "The temperature is: " << temp << " C" << endl;
+    }
+    else {
+        cout << "Please select C or F" << endl;
+    }
+    
+    cout << "**************Temperature Conversion in C++******************************" << endl;
+    return 0;
+}
+
+
+// Beginner project 
