@@ -1,0 +1,37 @@
+// Input your name to enjoy your special day
+#include <iostream>
+#include <string>
+using namespace std;
+
+void happyBirthday(const string& name) {
+    cout << "Happy Birthday to you!\n";
+    cout << "Happy Birthday to you!\n";
+    cout << "Happy Birthday dear " << name << "!\n";
+    cout << "Happy Birthday to you!\n\n";
+    cout << "Hip hip hooray! Hip hip hooray!\n\n";
+}
+
+int main() {
+    string name;
+
+    cout << "Who's having a birthday today? Enter your name: ";
+    getline(cin, name);
+
+    // Handle empty input
+    if (name.empty()) {
+        name = "Amazing Person";
+    }
+
+    cout << "\nLet's sing for " << name << "!\n\n";
+
+    // Sing it twice like the real tradition!
+    happyBirthday(name);
+    happyBirthday(name);
+
+    cout << "And here's an amazing Happy Birthday song for you:\n";
+    cout << "https://www.youtube.com/watch?v=XTh2rsVuDWs\n\n";
+    cout << "(Click the link or paste it in your browser to enjoy a beautiful version!)\n";
+    cout << "Hope your day is filled with joy and cake!\n";
+
+    return 0;
+}
